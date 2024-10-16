@@ -20,7 +20,7 @@ Alexandrite için çok zaman ve çaba harcandı. Gelişimi desteklemek isterseni
 
 ## Sunucuda Barındırma
 
-Alexandrite, birkaç yapılandırma seçeneği ile kendinize barındırmayı destekler. `docker`'a argüman olarak hangi seçeneklerin geçirilebileceğini görmek için [örnek ortam değişkeni yapılandırmasına](.env.example) göz atın.
+Alexandrite, birkaç yapılandırma seçeneği ile kendi sunucunuzda barındırmayı destekler. `docker`'a argüman olarak hangi seçeneklerin geçirilebileceğini görmek için [örnek ortam değişkeni yapılandırmasına](.env.example) göz atın.
 
 ### Docker Kullanarak
 
