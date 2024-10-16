@@ -18,7 +18,7 @@ Alexandrite, birçok özellik ile dolu!
 
 Alexandrite için çok zaman ve çaba harcandı. Gelişimi desteklemek isterseniz [Buy Me a Coffee](https://www.buymeacoffee.com/sheodox) üzerinden katkıda bulunabilirsiniz. Tüm desteklerinizi gerçekten takdir ediyorum!
 
-## Kendinize Barındırma
+## Sunucuda Barındırma
 
 Alexandrite, birkaç yapılandırma seçeneği ile kendinize barındırmayı destekler. `docker`'a argüman olarak hangi seçeneklerin geçirilebileceğini görmek için [örnek ortam değişkeni yapılandırmasına](.env.example) göz atın.
 
