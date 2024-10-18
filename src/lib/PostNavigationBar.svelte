@@ -8,21 +8,21 @@
 				cl="tertiary"
 				on:click={() => dispatch('scroll-previous-result')}
 				icon="chevron-up"
-				text="Previous Result"
+				text="Önceki Sonuç"
 				disabled={!canScrollPrevResult}
 			/>
 			<IconButton
 				cl="tertiary"
 				on:click={() => dispatch('scroll-next-result')}
 				icon="chevron-down"
-				text="Next Result"
+				text="Sonraki Sonuç"
 				disabled={!canScrollNextResult}
 			/>
 			<IconButton
 				cl="tertiary"
 				on:click={() => dispatch('clear-search')}
 				icon="delete-left"
-				text="Clear Search"
+				text="Aramayı Temizle"
 				disabled={!canScrollNext}
 			/>
 		</FloatingNav>
@@ -33,18 +33,18 @@
 			cl="tertiary"
 			on:click={() => dispatch('scroll-previous')}
 			icon="chevron-up"
-			text="Previous Comment"
+			text="Önceki Yorum"
 			disabled={!canScrollPrev}
 		/>
 		<IconButton
 			cl="tertiary"
 			on:click={() => dispatch('scroll-next')}
 			icon="chevron-down"
-			text="Next Comment"
+			text="Sonraki Yorum"
 			disabled={!canScrollNext}
 		/>
 		{#if closeable}
-			<IconButton cl="tertiary" on:click={() => dispatch('close')} icon="times" text="Close Post" />
+			<IconButton cl="tertiary" on:click={() => dispatch('close')} icon="times" text="Gönderiyi Kapat" />
 		{/if}
 	</FloatingNav>
 </FloatingNavContainer>

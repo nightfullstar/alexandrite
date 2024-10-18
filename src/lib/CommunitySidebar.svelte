@@ -22,10 +22,10 @@
 				<Stack dir="c" gap={2}>
 					{#if moderators}
 						<Accordion buttonClasses="tertiary">
-							<span slot="title">Moderation</span>
+							<span slot="title">Moderasyon</span>
 							<Stack dir="c" gap={2}>
 								<Stack dir="r" gap={2} align="center" justify="between">
-									<h3 class="m-0">Moderators</h3>
+									<h3 class="m-0">Moderatörler</h3>
 									<ModlogLink
 										communityId={community.id}
 										highlight={userModerates ?? false}
@@ -41,7 +41,7 @@
 								{#if userModerates && !userIsHeadMod}
 									<Stack dir="r" justify="end">
 										<BusyButton small icon="user-minus" busy={$userModResignPending} on:click={resignFromModTeam}
-											>Leave Mod Team</BusyButton
+											>Moderasyon Ekibini Terk Et</BusyButton
 										>
 									</Stack>
 								{/if}
@@ -99,7 +99,7 @@
 		}
 		const communityName = nameAtInstance(community, community.title);
 
-		if (!$userId || !$siteMeta.my_user || !confirm(`Are you sure you want to resign as a mod of "${communityName}".`)) {
+		if (!$userId || !$siteMeta.my_user || !confirm(`Moderasyonu terk etmek istediğinizden emin misiniz: "${communityName}".`)) {
 			return;
 		}
 		const me = $siteMeta.my_user.local_user_view.person,

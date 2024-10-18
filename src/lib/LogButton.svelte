@@ -11,6 +11,6 @@
 <script lang="ts">
 	import { Icon, Tooltip, ripple } from 'sheodox-ui';
 
-	export let text = 'Log This';
+	export let text = 'Bunu Logla';
 	export let small = true;
 </script>

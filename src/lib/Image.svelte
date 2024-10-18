@@ -38,13 +38,13 @@
 {#if error}
 	<div
 		class="error align-items-center justify-content-center f-row"
-		title="Image load failed"
+		title="Görsel yüklenemedi"
 		style={loadingHeight ? `height: ${loadingHeight};` : ''}
 	>
 		<Icon icon="bug" />
 	</div>
 {:else if nsfw && $nsfwImageHandling === 'HIDE' && !showAnyway}
-	<button class="img show-nsfw" on:click|stopPropagation={() => (showAnyway = true)}>Show NSFW</button>
+	<button class="img show-nsfw" on:click|stopPropagation={() => (showAnyway = true)}>NSFW içeriği göster</button>
 {:else if valid}
 	<picture class="image-mode-{mode} {full ? 'image-full' : ''}" class:blur={nsfw && $nsfwImageHandling === 'BLUR'}>
 		{#if isLemmyHosted}

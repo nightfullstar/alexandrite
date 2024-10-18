@@ -20,9 +20,9 @@
 	$: joined = communityView.subscribed !== 'NotSubscribed';
 
 	$: status = {
-		Pending: 'Pending',
-		Subscribed: 'Unsubscribe',
-		NotSubscribed: 'Subscribe'
+		Pending: 'Bekleniyor...',
+		Subscribed: 'Abonelikten Çık',
+		NotSubscribed: 'Abone Ol'
 	}[communityView.subscribed];
 
 	$: joinState = createStatefulAction(async () => {

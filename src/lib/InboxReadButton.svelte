@@ -2,7 +2,7 @@
 	small
 	busy={$markReadState.busy}
 	icon={content.read ? 'envelope-open' : 'envelope-circle-check'}
-	text="Mark {content.read ? 'Unread' : 'Read'}"
+	text="{content.read ? 'Okunmadu' : 'Okundu'} İşaretle"
 	cl={content.read ? 'tertiary' : 'secondary'}
 	on:click={$markReadState.submit}
 />

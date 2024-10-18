@@ -23,7 +23,7 @@
 			{/each}
 
 			<SidebarSubscriptionList
-				title="Favorites"
+				title="Favoriler"
 				communities={favoriteCommunities.map((v) => v.community)}
 				favorites={$favoriteCommunitiesIds}
 				on:favorite={(e) => onFavorite(e.detail)}
@@ -31,7 +31,7 @@
 
 			{#if $siteMeta.my_user}
 				<SidebarSubscriptionList
-					title="Moderating"
+					title="Moderasyon"
 					communities={$siteMeta.my_user.moderates.map((v) => v.community)}
 					favorites={$favoriteCommunitiesIds}
 					on:favorite={(e) => onFavorite(e.detail)}
@@ -39,7 +39,7 @@
 			{/if}
 
 			<SidebarSubscriptionList
-				title="Subscriptions"
+				title="Abonelikler"
 				communities={subscriptions.map((v) => v.community)}
 				favorites={$favoriteCommunitiesIds}
 				on:favorite={(e) => onFavorite(e.detail)}
@@ -79,12 +79,12 @@
 
 	$: loggedIn = $profile.loggedIn;
 	$: links = [
-		{ href: `/${$profile.instance}`, text: 'Home', icon: 'home' },
-		{ href: `/${$profile.instance}/search`, text: 'Search', icon: 'magnifying-glass' },
-		{ href: `/${$profile.instance}/u/${$profile.username}`, text: 'Profile', icon: 'user', disabled: !loggedIn },
-		{ href: `/${$profile.instance}/communities`, text: 'Communities', icon: 'users' },
-		{ text: 'Settings', icon: 'cog', href: `/${$profile.instance}/settings` },
-		{ href: '/about', text: 'About Alexandrite', icon: 'address-card' },
-		{ text: 'Help', icon: 'question-circle', href: '/help', as: 'a' }
+		{ href: `/${$profile.instance}`, text: 'Ana Sayfa', icon: 'home' },
+		{ href: `/${$profile.instance}/search`, text: 'Ara', icon: 'magnifying-glass' },
+		{ href: `/${$profile.instance}/u/${$profile.username}`, text: 'Profil', icon: 'user', disabled: !loggedIn },
+		{ href: `/${$profile.instance}/communities`, text: 'Topluluklar', icon: 'users' },
+		{ text: 'Ayarlar', icon: 'cog', href: `/${$profile.instance}/settings` },
+		{ href: '/about', text: 'Alexandrite Hakkında', icon: 'address-card' },
+		{ text: 'Yardım', icon: 'question-circle', href: '/help', as: 'a' }
 	].filter((f) => !f.disabled);
 </script>

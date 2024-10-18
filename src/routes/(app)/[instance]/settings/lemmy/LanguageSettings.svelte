@@ -10,19 +10,19 @@
 </style>
 
 <Accordion open>
-	<span slot="title">Languages</span>
+	<span slot="title">Diller</span>
 	<Stack dir="c" gap={2}>
-		<Alert variant="warning">Warning: If you deselect Undetermined, you will not see most content.</Alert>
+		<Alert variant="warning">Uyarı: Eğer "Belirsiz" seçeneğini seçerseniz paylaşılan içeriklerin çoğunu göremeyeceksiniz.</Alert>
 		<Stack dir="r" gap={2} justify="between" align="center">
 			<p class="m-0">
 				{#if selectedLanguages.length}
 					You use <strong>{selectedLanguages.map((lang) => lang.name).join(', ')}</strong>.
 				{:else}
-					Select the language(s) you post and comment in below.
+					Gönderi paylaştığınız ve yorum yaptığınız dili aşağıdan seçebilirsiniz.
 				{/if}
 			</p>
 			<div class="search">
-				<Search bind:value={langSearchText} label="Search Languages" placeholder="Search Languages" />
+				<Search bind:value={langSearchText} label="Dilleri Ara" placeholder="Dilleri Ara" />
 			</div>
 		</Stack>
 		<div class="languages p-2">

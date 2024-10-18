@@ -5,8 +5,8 @@
 		</form>
 	</div>
 	<div class="modal-footer gap-2">
-		<button on:click={() => (visible = false)} class="tertiary m-0">Cancel</button>
-		<BusyButton on:click={submit} cl="danger" {busy}>Submit</BusyButton>
+		<button on:click={() => (visible = false)} class="tertiary m-0">İptal</button>
+		<BusyButton on:click={submit} cl="danger" {busy}>Gönder</BusyButton>
 	</div>
 </Modal>
 
@@ -17,7 +17,7 @@
 
 	export let visible: boolean;
 	export let busy: boolean;
-	export let title = 'Report';
+	export let title = 'Raporla';
 	let reason = '';
 
 	const dispatch = createEventDispatcher<{ reason: string }>();

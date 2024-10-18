@@ -61,7 +61,7 @@
 
 	$: links = [
 		{
-			text: 'Profile',
+			text: 'Profil',
 			icon: 'user',
 			href: `/${$profile.instance}/u/${$profile.username}`,
 			disabled: !loggedIn,
@@ -69,14 +69,14 @@
 		},
 		{ text: 'Settings', icon: 'cog', href: `/${$profile.instance}/settings`, as: 'a' },
 		{
-			text: 'Switch Account',
+			text: 'Hesap Değiştir',
 			icon: 'circle-user',
 			click: () => dispatch('accounts'),
 			as: 'button',
 			// don't show the switcher if forced to an instance, browsing other instances only support as guest
 			disabled: !!config.forcedInstance && $instance !== config.forcedInstance
 		},
-		{ text: 'Login / Manage Accounts', icon: 'users', href: '/instance', as: 'a' },
+		{ text: 'Hesaba Giriş / Ayarlar', icon: 'users', href: '/instance', as: 'a' },
 		...allowedInstances.map((inst) => ({
 			text: 'Switch to ' + inst,
 			href: `/${inst}`,
@@ -89,10 +89,10 @@
 			icon: 'shuffle',
 			as: 'a'
 		})),
-		{ text: 'About Alexandrite', icon: 'address-card', href: '/about', as: 'a' },
-		{ text: 'Help', icon: 'question-circle', href: '/help', as: 'a' },
+		{ text: 'Alexandrite Hakkında', icon: 'address-card', href: '/about', as: 'a' },
+		{ text: 'Yardım', icon: 'question-circle', href: '/help', as: 'a' },
 		{
-			text: 'Logout',
+			text: 'Çıkış Yap',
 			icon: 'right-from-bracket',
 			click: () => {
 				logout();

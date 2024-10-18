@@ -6,36 +6,40 @@ export type NSFWImageHandling = 'HIDE' | 'SHOW' | 'BLUR';
 export const NSFWHandlingOptions: { value: NSFWImageHandling; label: string; description: string }[] = [
 	{
 		value: 'HIDE',
-		label: 'Hide',
-		description: "NSFW thumbnails won't load unless clicked, and by default hides NSFW post contents."
+		label: 'Gizle',
+		description: 'NSFW küçük resimleri tıklanmadıkça yüklenmez ve varsayılan olarak NSFW gönderi içeriklerini gizler.'
 	},
 	{
 		value: 'BLUR',
-		label: 'Blur',
-		description: 'Blur NSFW thumbnails and images unless hovered, and by default hides NSFW post contents.'
+		label: 'Bulanıklaştır',
+		description: 'NSFW küçük resimlerini ve görüntülerini üzerine gelinmedikçe bulanıklaştırır ve varsayılan olarak NSFW gönderi içeriklerini gizler.'
 	},
-	{ value: 'SHOW', label: 'Show', description: 'Always show NSFW images' }
-];
+	{
+		value: 'SHOW',
+		label: 'Göster',
+		description: 'NSFW görüntülerini her zaman gösterir.'
+	}
+	];
 
 export type FeedLayout = 'AUTO' | 'OVERLAY' | 'COLUMNS';
 
 export const FeedLayoutOptions: { value: FeedLayout; label: string; description: string }[] = [
 	{
 		value: 'AUTO',
-		label: 'Auto',
-		description: 'Your feed layout is automatically chosen based on your screen size.'
+		label: 'Otomatik',
+		description: 'Akış düzeniniz ekran boyutunuza göre otomatik olarak seçilir.'
 	},
 	{
 		value: 'OVERLAY',
-		label: 'Overlay',
-		description: 'You can view posts in an overlay that shows over the feed. Good for narrow screens.'
+		label: 'Kaplama',
+		description: 'Gönderileri akışın üzerinde gösterilen bir kaplamada görüntüleyebilirsiniz. Dar ekranlar için iyi.'
 	},
 	{
 		value: 'COLUMNS',
-		label: 'Columns',
-		description: 'View the feed and a post side by side. Lets you multitask.'
+		label: 'Sütunlar',
+		description: 'Akışı ve bir gönderiyi yan yana görüntüleyin. Çoklu görev yapmanızı sağlar.'
 	}
-];
+	];
 
 export type PostPreviewLayout = 'LIST' | 'COMPACT' | 'CARD';
 
@@ -47,23 +51,23 @@ export const PostPreviewLayoutOptions: {
 }[] = [
 	{
 		value: 'LIST',
-		label: 'List',
-		description: 'Small thumbnails with all the posts in a list',
+		label: 'Liste',
+		description: 'Tüm gönderilerin küçük resimlerinin listelendiği bir liste',
 		icon: 'list'
 	},
 	{
 		value: 'COMPACT',
-		label: 'Compact',
-		description: 'Like the list style, but more dense.',
+		label: 'Kompakt',
+		description: 'Liste stiline benzer, ancak daha yoğun.',
 		icon: 'compress'
 	},
 	{
 		value: 'CARD',
-		label: 'Cards',
-		description: 'Large images and post text previews, get the gist without opening the post.',
+		label: 'Kartlar',
+		description: 'Büyük resimler ve gönderi metni önizlemeleri, gönderiyi açmadan içeriği anlayın.',
 		icon: 'rectangle-list'
 	}
-];
+	];
 
 export interface AlexandriteSettings {
 	//theme options

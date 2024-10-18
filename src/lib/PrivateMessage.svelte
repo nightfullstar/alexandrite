@@ -46,7 +46,7 @@
 						showEdit = false;
 					}}
 					disabled={showReply}
-					text="Reply"
+					text="Cevapla"
 				/>
 				{#if !toMe}
 					<IconButton
@@ -57,11 +57,11 @@
 							showReply = false;
 						}}
 						disabled={showEdit}
-						text="Edit"
+						text="Düzenle"
 					/>
-					<IconButton icon="trash-can" small on:click={onDelete} text="Delete" />
+					<IconButton icon="trash-can" small on:click={onDelete} text="Sil" />
 				{:else}
-					<IconButton icon="flag" small on:click={() => (showReportModal = true)} text="Report" />
+					<IconButton icon="flag" small on:click={() => (showReportModal = true)} text="Raporla" />
 				{/if}
 
 				<LogButton on:click={() => console.log({ privateMessageView })} />
@@ -69,7 +69,7 @@
 
 			{#if showReply}
 				<PrivateMessageCompose
-					label="Reply"
+					label="Cevapla"
 					to={otherPerson}
 					on:cancel={() => (showReply = false)}
 					cancellable
@@ -78,7 +78,7 @@
 			{/if}
 			{#if showEdit}
 				<PrivateMessageCompose
-					label="Edit Message"
+					label="Mesajı Düzenle"
 					to={otherPerson}
 					on:update={onEdited}
 					on:cancel={() => (showEdit = false)}
@@ -127,7 +127,7 @@
 		});
 
 		createAutoExpireToast({
-			message: 'Message Reported'
+			message: 'Mesaj Raporlandı'
 		});
 		showReportModal = false;
 	});
@@ -151,7 +151,7 @@
 		if (!jwt) {
 			return;
 		}
-		if (confirm('Are you sure you want to delete this message?')) {
+		if (confirm('Bu mesajı silmek istediğinizden emin misiniz?')) {
 			await client.deletePrivateMessage({
 				deleted: true,
 				private_message_id: privateMessageView.private_message.id

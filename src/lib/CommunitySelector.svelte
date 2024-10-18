@@ -6,7 +6,7 @@
 </style>
 
 <div class="card">
-	<h2 class="card-title">Select a Community</h2>
+	<h2 class="card-title">Topluluk Seçimi</h2>
 	<Stack cl="card-body" dir="c" gap={2}>
 		<Search bind:value={searchText} />
 		<Stack cl="communities-list" dir="c" gap={2}>
@@ -100,7 +100,7 @@
 			}
 		} else {
 			const comms = await client.search({
-				type_: 'Communities',
+				type_: 'Topluluklar',
 				q: searchText,
 				limit: 50
 			});

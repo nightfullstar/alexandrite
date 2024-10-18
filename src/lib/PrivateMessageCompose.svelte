@@ -3,7 +3,7 @@
 		<span>Messaging</span>
 		<UserLink user={to} />
 	</Stack>
-	<Alert variant="warning">Warning: Private messages on Lemmy are not secure.</Alert>
+	<Alert variant="warning">Uyarı: Lemmy'deki özel mesajlar henüz güvenli değildir.</Alert>
 	<form bind:this={messageForm} use:submitOnHardEnter>
 		<CommentEditor
 			{label}
@@ -35,7 +35,7 @@
 	$: client = $profile.client;
 	$: jwt = $profile.jwt;
 
-	export let label = 'Message';
+	export let label = 'Mesaj';
 	export let to: Person;
 	export let cancellable = false;
 	// if they are editing a message, this is the message they're editing

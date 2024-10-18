@@ -29,16 +29,16 @@
 			badges.push({ color: 'red', text: 'NSFW' });
 		}
 		if (post.locked) {
-			badges.push({ color: 'orange', text: 'Locked', icon: 'lock' });
+			badges.push({ color: 'orange', text: 'Kilitlendi', icon: 'lock' });
 		}
 		if (post.deleted) {
-			badges.push({ color: 'red', text: 'Deleted', icon: 'trash' });
+			badges.push({ color: 'red', text: 'Silindi', icon: 'trash' });
 		}
 		if (post.featured_local) {
-			badges.push({ color: 'orange', text: 'Featured in Local', icon: 'thumbtack' });
+			badges.push({ color: 'orange', text: 'Lokalde Öne Çıkan', icon: 'thumbtack' });
 		}
 		if (post.featured_community) {
-			badges.push({ color: 'green', text: 'Featured in Community', icon: 'thumbtack' });
+			badges.push({ color: 'green', text: 'Toplulukta Öne Çıkan', icon: 'thumbtack' });
 		}
 		return badges;
 	}

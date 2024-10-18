@@ -12,7 +12,7 @@
 	<input name="communityId" value={community.id} type="hidden" />
 	<input name="honeypot" value="" class="dn" />
 
-	<TextInput name="title" bind:value={title}>Title</TextInput>
+	<TextInput name="title" bind:value={title}>Başlık</TextInput>
 	<Stack dir="r" gap={2} justify="between" align="start" cl="f-wrap">
 		<div class="f-1">
 			<TextInput name="url" bind:value={url} placeholder="https://example.com">URL</TextInput>
@@ -31,14 +31,14 @@
 		{#if urlMetadata && urlMetadata.title && title !== urlMetadata.title}
 			<EmbedCard title={urlMetadata.title} description={''}>
 				<Stack dir="r" gap={2}>
-					<button class="secondary f-1" type="button" on:click={onUseSuggestedTitle}>Use This Title</button>
-					<button class="tertiary" type="button" on:click={() => (urlMetadata = null)}>Cancel</button>
+					<button class="secondary f-1" type="button" on:click={onUseSuggestedTitle}>Bu Başlığı Kullan</button>
+					<button class="tertiary" type="button" on:click={() => (urlMetadata = null)}>İptal</button>
 				</Stack>
 			</EmbedCard>
 		{/if}
 	</Stack>
 	<Stack dir="c" cl="mt-2">
-		<MarkdownEditor label="Post Text" name="content" bind:value={content} required={false} />
+		<MarkdownEditor label="Gönderi İçeriği" name="content" bind:value={content} required={false} />
 	</Stack>
 
 	<Stack dir="r" justify="between">
@@ -109,12 +109,12 @@
 		if (!res.metadata.title) {
 			createAutoExpireToast({
 				variant: 'error',
-				message: "Lemmy couldn't find a title for that URL"
+				message: "Lemmy bu URL için bir başlık bulamadı"
 			});
 		} else if (res.metadata.title === title) {
 			createAutoExpireToast({
 				variant: 'info',
-				message: "You're already using the suggested title"
+				message: "Zaten önerilen başlığı kullanıyorsunuz"
 			});
 		}
 

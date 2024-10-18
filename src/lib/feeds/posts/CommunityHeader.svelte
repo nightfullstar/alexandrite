@@ -56,14 +56,14 @@
 		...($profile.loggedIn
 			? [
 					{
-						text: 'Post',
+						text: 'Gönderi',
 						icon: 'plus',
 						href: `/${$profile.instance}/create/post?community=${nameAtInstance(community)}`
 					}
 			  ]
 			: []),
 		{
-			text: 'Search',
+			text: 'Ara',
 			icon: 'magnifying-glass',
 			href: `/${$profile.instance}/search?community=${nameAtInstance(community)}`
 		},

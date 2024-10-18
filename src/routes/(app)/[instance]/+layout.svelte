@@ -30,7 +30,7 @@
 	</div>
 	<div slot="headerCenter">
 		<form method="GET" action="/{$instance}/search" on:submit={onSearchSubmit}>
-			<Search name="q" placeholder="Search" bind:value={headerSearchText} />
+			<Search name="q" placeholder="Ara" bind:value={headerSearchText} />
 		</form>
 	</div>
 	<div slot="headerEnd" class="f-row align-items-center">
@@ -46,7 +46,7 @@
 		{/if}
 		{#if isModerator}
 			<IconLink
-				text="Unread Reports"
+				text="Okunmamış Raporlar"
 				icon="shield-halved"
 				cl="{$unreadReportCount > 0 ? 'sx-badge-red' : ''} p-2"
 				href="/{$profile.instance}/reports"

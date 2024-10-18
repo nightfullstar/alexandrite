@@ -5,7 +5,7 @@
 	}
 </style>
 
-<Title title="Search" />
+<Title title="Ara" />
 
 <div class="search-header my-2">
 	{#if data.communityView}

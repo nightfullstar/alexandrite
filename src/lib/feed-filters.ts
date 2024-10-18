@@ -1,310 +1,310 @@
 export type FeedType = 'top' | 'community' | 'user';
 
 export interface FilterOption {
-	value: string;
-	label: string;
-	disabled?: boolean;
+    value: string;
+    label: string;
+    disabled?: boolean;
 }
 
 export const NormalFeedTypeOptions = [
-	{
-		value: 'Posts',
-		label: 'Posts'
-	},
-	{
-		value: 'Comments',
-		label: 'Comments'
-	}
+    {
+        value: 'Posts',
+        label: 'Gönderiler'
+    },
+    {
+        value: 'Comments',
+        label: 'Yorumlar'
+    }
 ];
 export const UserFeedTypeOptions = (isMe: boolean) => {
-	const baseTypes = [
-		{
-			value: 'Overview',
-			label: 'Overview'
-		},
-		{
-			value: 'Comments',
-			label: 'Comments'
-		},
-		{
-			value: 'Posts',
-			label: 'Posts'
-		}
-	];
-	return !isMe
-		? baseTypes
-		: [
-				...baseTypes,
-				{
-					value: 'Saved',
-					label: 'Saved'
-				}
-		  ];
+    const baseTypes = [
+        {
+            value: 'Overview',
+            label: 'Genel Bakış'
+        },
+        {
+            value: 'Comments',
+            label: 'Yorumlar'
+        },
+        {
+            value: 'Posts',
+            label: 'Gönderiler'
+        }
+    ];
+    return !isMe
+        ? baseTypes
+        : [
+                ...baseTypes,
+                {
+                    value: 'Saved',
+                    label: 'Kaydedilenler'
+                }
+          ];
 };
 export const ReportFeedStateOptions = [
-	{
-		value: 'Unread',
-		label: 'Unread'
-	},
-	{
-		value: 'All',
-		label: 'All'
-	}
+    {
+        value: 'Unread',
+        label: 'Okunmamış'
+    },
+    {
+        value: 'All',
+        label: 'Tümü'
+    }
 ];
 export const ReportFeedTypeOptions = [
-	{
-		value: 'All',
-		label: 'All'
-	},
-	{
-		value: 'Posts',
-		label: 'Posts'
-	},
-	{
-		value: 'Comments',
-		label: 'Comments'
-	}
+    {
+        value: 'All',
+        label: 'Tümü'
+    },
+    {
+        value: 'Posts',
+        label: 'Gönderiler'
+    },
+    {
+        value: 'Comments',
+        label: 'Yorumlar'
+    }
 ];
 
 export const SearchTypeOptions = [
-	{
-		value: 'All',
-		label: 'All'
-	},
-	{
-		value: 'Posts',
-		label: 'Posts'
-	},
-	{
-		value: 'Comments',
-		label: 'Comments'
-	},
-	{
-		value: 'Communities',
-		label: 'Communities'
-	},
-	{
-		value: 'Users',
-		label: 'Users'
-	},
-	{
-		value: 'Url',
-		label: 'URL'
-	}
+    {
+        value: 'All',
+        label: 'Tümü'
+    },
+    {
+        value: 'Posts',
+        label: 'Gönderiler'
+    },
+    {
+        value: 'Comments',
+        label: 'Yorumlar'
+    },
+    {
+        value: 'Communities',
+        label: 'Topluluklar'
+    },
+    {
+        value: 'Users',
+        label: 'Kullanıcılar'
+    },
+    {
+        value: 'Url',
+        label: 'URL'
+    }
 ];
 
 export const ListingOptions = (loggedIn: boolean) => [
-	{
-		value: 'Subscribed',
-		label: 'Subscribed',
-		disabled: !loggedIn
-	},
-	{
-		value: 'Local',
-		label: 'Local'
-	},
-	{
-		value: 'All',
-		label: 'All'
-	}
+    {
+        value: 'Subscribed',
+        label: 'Abonelikler',
+        disabled: !loggedIn
+    },
+    {
+        value: 'Local',
+        label: 'Yerel'
+    },
+    {
+        value: 'All',
+        label: 'Tümü'
+    }
 ];
 
 export const PostSortOptions = [
+    {
+        value: 'Hot',
+        label: 'Popüler'
+    },
+    {
+        value: 'Active',
+        label: 'Aktif'
+    },
+    {
+        value: 'Scaled',
+        label: 'Ölçeklenmiş'
+    },
+    {
+        value: 'New',
+        label: 'Yeni'
+    },
+    {
+        value: 'Old',
+        label: 'Eski'
+    },
+    {
+        value: 'MostComments',
+        label: 'En Çok Yorum'
+    },
+    {
+        value: 'NewComments',
+        label: 'Yeni Yorumlar'
+    },
 	{
-		value: 'Hot',
-		label: 'Hot'
-	},
-	{
-		value: 'Active',
-		label: 'Active'
-	},
-	{
-		value: 'Scaled',
-		label: 'Scaled'
-	},
-	{
-		value: 'New',
-		label: 'New'
-	},
-	{
-		value: 'Old',
-		label: 'Old'
-	},
-	{
-		value: 'MostComments',
-		label: 'Most Comments'
-	},
-	{
-		value: 'NewComments',
-		label: 'New Comments'
-	},
-	{
-		value: 'TopHour',
-		label: 'Top Hour'
-	},
-	{
-		value: 'TopSixHour',
-		label: 'Top Six Hours'
-	},
-	{
-		value: 'TopTwelveHour',
-		label: 'Top Twelve Hours'
-	},
-	{
-		value: 'TopDay',
-		label: 'Top Day'
-	},
-	{
-		value: 'TopWeek',
-		label: 'Top Week'
-	},
-	{
-		value: 'TopMonth',
-		label: 'Top Month'
-	},
-	{
-		value: 'TopYear',
-		label: 'Top Year'
-	},
-	{
-		value: 'TopAll',
-		label: 'Top All Time'
-	}
+        value: 'TopHour',
+        label: 'Saatin En İyisi'
+    },
+    {
+        value: 'TopSixHour',
+        label: 'Son 6 Saatin En İyisi'
+    },
+    {
+        value: 'TopTwelveHour',
+        label: 'Son 12 Saatin En İyisi'
+    },
+    {
+        value: 'TopDay',
+        label: 'Günün En İyisi'
+    },
+    {
+        value: 'TopWeek',
+        label: 'Haftanın En İyisi'
+    },
+    {
+        value: 'TopMonth',
+        label: 'Ayın En İyisi'
+    },
+    {
+        value: 'TopYear',
+        label: 'Yılın En İyisi'
+    },
+    {
+        value: 'TopAll',
+        label: 'Tüm Zamanların En İyisi'
+    }
 ];
 
 export const CommentFeedSortOptions = [
+    {
+        value: 'New',
+        label: 'Yeni'
+    },
+    {
+        value: 'Old',
+        label: 'Eski'
+    },
 	{
-		value: 'New',
-		label: 'New'
-	},
-	{
-		value: 'Old',
-		label: 'Old'
-	},
-	{
-		value: 'TopHour',
-		label: 'Top Hour'
-	},
-	{
-		value: 'TopSixHour',
-		label: 'Top Six Hours'
-	},
-	{
-		value: 'TopTwelveHour',
-		label: 'Top Twelve Hours'
-	},
-	{
-		value: 'TopDay',
-		label: 'Top Day'
-	},
-	{
-		value: 'TopWeek',
-		label: 'Top Week'
-	},
-	{
-		value: 'TopMonth',
-		label: 'Top Month'
-	},
-	{
-		value: 'TopYear',
-		label: 'Top Year'
-	},
-	{
-		value: 'TopAll',
-		label: 'Top All Time'
-	}
+        value: 'TopHour',
+        label: 'Saatin En İyisi'
+    },
+    {
+        value: 'TopSixHour',
+        label: 'Son 6 Saatin En İyisi'
+    },
+    {
+        value: 'TopTwelveHour',
+        label: 'Son 12 Saatin En İyisi'
+    },
+    {
+        value: 'TopDay',
+        label: 'Günün En İyisi'
+    },
+    {
+        value: 'TopWeek',
+        label: 'Haftanın En İyisi'
+    },
+    {
+        value: 'TopMonth',
+        label: 'Ayın En İyisi'
+    },
+    {
+        value: 'TopYear',
+        label: 'Yılın En İyisi'
+    },
+    {
+        value: 'TopAll',
+        label: 'Tüm Zamanların En İyisi'
+    }
 ];
 
 export const SearchSortOptions = CommentFeedSortOptions;
 
 export const InboxTypes = [
-	{ value: 'Unread', label: 'Unread' },
-	{ value: 'All', label: 'All' }
+    { value: 'Unread', label: 'Okunmamış' },
+    { value: 'All', label: 'Tümü' }
 ];
 
 export const InboxListings = [
-	{ value: 'All', label: 'All' },
-	{ value: 'Replies', label: 'Replies' },
-	{ value: 'Mentions', label: 'Mentions' },
-	{ value: 'Messages', label: 'Messages' }
+    { value: 'All', label: 'Tümü' },
+    { value: 'Replies', label: 'Yanıtlar' },
+    { value: 'Mentions', label: 'Bahsedilenler' },
+    { value: 'Messages', label: 'Mesajlar' }
 ];
 export const InboxSortOptions = [
-	{
-		value: 'Hot',
-		label: 'Hot'
-	},
-	{
-		value: 'Top',
-		label: 'Top'
-	},
-	{
-		value: 'New',
-		label: 'New'
-	},
-	{
-		value: 'Old',
-		label: 'Old'
-	}
+    {
+        value: 'Hot',
+        label: 'Popüler'
+    },
+    {
+        value: 'Top',
+        label: 'En İyi'
+    },
+    {
+        value: 'New',
+        label: 'Yeni'
+    },
+    {
+        value: 'Old',
+        label: 'Eski'
+    }
 ];
 
 export const CommentSortOptions = [
-	{
-		value: 'Hot',
-		label: 'Hot'
-	},
-	{
-		value: 'Top',
-		label: 'Top'
-	},
-	{
-		value: 'New',
-		label: 'New'
-	},
-	{
-		value: 'Old',
-		label: 'Old'
-	}
+    {
+        value: 'Hot',
+        label: 'Popüler'
+    },
+    {
+        value: 'Top',
+        label: 'En İyi'
+    },
+    {
+        value: 'New',
+        label: 'Yeni'
+    },
+    {
+        value: 'Old',
+        label: 'Eski'
+    }
 ];
 
 export const UserSortOptions = [
-	{
-		value: 'New',
-		label: 'New'
-	},
-	{
-		value: 'Old',
-		label: 'Old'
-	},
-	{
-		value: 'TopHour',
-		label: 'Top Hour'
-	},
-	{
-		value: 'TopSixHour',
-		label: 'Top Six Hours'
-	},
-	{
-		value: 'TopTwelveHour',
-		label: 'Top Twelve Hours'
-	},
-	{
-		value: 'TopDay',
-		label: 'Top Day'
-	},
-	{
-		value: 'TopWeek',
-		label: 'Top Week'
-	},
-	{
-		value: 'TopMonth',
-		label: 'Top Month'
-	},
-	{
-		value: 'TopYear',
-		label: 'Top Year'
-	},
-	{
-		value: 'TopAll',
-		label: 'Top All Time'
-	}
+    {
+        value: 'New',
+        label: 'Yeni'
+    },
+    {
+        value: 'Old',
+        label: 'Eski'
+    },
+    {
+        value: 'TopHour',
+        label: 'Saatin En İyisi'
+    },
+    {
+        value: 'TopSixHour',
+        label: 'Son 6 Saatin En İyisi'
+    },
+    {
+        value: 'TopTwelveHour',
+        label: 'Son 12 Saatin En İyisi'
+    },
+    {
+        value: 'TopDay',
+        label: 'Günün En İyisi'
+    },
+    {
+        value: 'TopWeek',
+        label: 'Haftanın En İyisi'
+    },
+    {
+        value: 'TopMonth',
+        label: 'Ayın En İyisi'
+    },
+    {
+        value: 'TopYear',
+        label: 'Yılın En İyisi'
+    },
+    {
+        value: 'TopAll',
+        label: 'Tüm Zamanların En İyisi'
+    }
 ];

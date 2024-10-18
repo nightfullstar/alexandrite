@@ -58,7 +58,7 @@
 	<div class="page-column page-column-post virtual-feed-scroll-container f-1" tabindex={0} use:focus>
 		<section class="f-column p-2 f-1 post">
 			{#if closeable}
-				<button on:click={dispatchClose} class="tertiary m-2"><Icon icon="times" /> Close Post</button>
+				<button on:click={dispatchClose} class="tertiary m-2"><Icon icon="times" /> Gönderiyi Kapat</button>
 			{/if}
 			<div class="ml-4 mb-1">
 				<Breadcrumbs {links} linkifyLast />
@@ -80,7 +80,7 @@
 					{#if postAssertions.has.any}
 						<button class="tertiary {small}" on:click={() => (showPost = !showPost)}>
 							<Icon icon={showPost ? 'eye-slash' : 'newspaper'} />
-							{showPost ? 'Hide' : 'Show'} Content
+						Gönderiyi	{showPost ? 'Gizle' : 'Göster'} 
 						</button>
 					{/if}
 				</Stack>
@@ -90,7 +90,7 @@
 			{#if $profile.loggedIn && !postView.post.locked}
 				<div class="comment-editor p-2">
 					<Accordion bind:open={$showNewCommentComposer} buttonClasses="tertiary">
-						<span slot="title">Leave a comment</span>
+						<span slot="title">Bir yorum bırak</span>
 						{#key $showNewCommentComposer}
 							<form bind:this={newCommentForm} use:submitOnHardEnter>
 								<CommentEditor
@@ -104,7 +104,7 @@
 				</div>
 			{/if}
 
-			<h2 class="px-2 mt-6 mb-0">Comments ({postView.counts.comments})</h2>
+			<h2 class="px-2 mt-6 mb-0">Yorumlar ({postView.counts.comments})</h2>
 			<section class="comment-sort-bar">
 				<Stack gap={4} dir="r" justify="between" align="center">
 					<Stack gap={4} align="center" cl="p-2" dir="r">
@@ -114,9 +114,9 @@
 							name="sort"
 							on:change={reloadComments}
 						/>
-						<Search bind:value={searchText} placeholder="Search Comments" />
+						<Search bind:value={searchText} placeholder="Yorumları Ara" />
 					</Stack>
-					<button class="tertiary" on:click={reloadComments}><Icon icon="refresh" /> Refresh Comments</button>
+					<button class="tertiary" on:click={reloadComments}><Icon icon="refresh" /> Yorumları Yenile</button>
 				</Stack>
 			</section>
 
@@ -147,7 +147,7 @@
 					endOfFeed={endOfCommentsFeed || viewingSingleCommentThread}
 					loadingContent={loadingComments}
 					loadingContentFailed={commentLoadFailed}
-					feedEndMessage="No more comments"
+					feedEndMessage="Başka yorum yok"
 					feedEndIcon="comment-slash"
 					expandLoadingIds={Array.from(commentExpandLoadingIds)}
 					bind:virtualFeedAPI
@@ -555,7 +555,7 @@
 
 	$: links = [
 		{
-			text: 'Home',
+			text: 'Ana Sayfa',
 			href: `/${$instance}`
 		},
 		{
@@ -589,7 +589,7 @@
 		// escape closes the post
 		if (key === 'escape') {
 			// TODO make this also check for pending replies
-			if (!newCommentText || confirm('You have an unsubmitted comment, are you sure you want to close the post?')) {
+			if (!newCommentText || confirm('Kaydedilmemiş bir yorumunuz var, gönderiyi kapatmak istediğinizden emin misiniz?')) {
 				dispatchClose();
 			}
 		}

@@ -1,9 +1,9 @@
 <Tooltip>
-	<span slot="tooltip">Create</span>
+	<span slot="tooltip">Oluştur</span>
 	<NavDropdown showOpenIcon={false}>
 		<span slot="button">
 			<Icon icon="plus" />
-			<span class="sr-only">Create</span>
+			<span class="sr-only">Oluştur</span>
 		</span>
 		<div slot="menu">
 			<ul>
@@ -44,7 +44,7 @@
 
 	$: links = [
 		{
-			text: 'New Post',
+			text: 'Yeni Gönderi',
 			icon: 'file',
 			href: `/${$profile.instance}/create/post`,
 			as: 'a'

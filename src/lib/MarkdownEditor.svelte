@@ -30,16 +30,16 @@
 				{autofocus}
 			/>
 			<Stack dir="r" gap={1}>
-				<IconButton icon="bold" text="Bold" type="button" on:click={format.bold} />
-				<IconButton icon="italic" text="Italic" type="button" on:click={format.italic} />
+				<IconButton icon="bold" text="Kalın" type="button" on:click={format.bold} />
+				<IconButton icon="italic" text="İtalik" type="button" on:click={format.italic} />
 				<IconButton icon="link" text="Link" type="button" on:click={format.link} />
-				<IconButton icon="header" text="Header" type="button" on:click={format.header} />
-				<IconButton icon="quote-left" text="Quote" type="button" on:click={format.quote} />
-				<IconButton icon="code" text="Code" type="button" on:click={format.code} />
-				<IconButton icon="strikethrough" text="Strikethrough" type="button" on:click={format.strikethrough} />
-				<IconButton icon="subscript" text="Subscript" type="button" on:click={format.subscript} />
-				<IconButton icon="superscript" text="Superscript" type="button" on:click={format.superscript} />
-				<IconButton icon="triangle-exclamation" text="Spoiler" type="button" on:click={format.spoiler} />
+				<IconButton icon="header" text="Başlık" type="button" on:click={format.header} />
+				<IconButton icon="quote-left" text="Alıntı" type="button" on:click={format.quote} />
+				<IconButton icon="code" text="Kod" type="button" on:click={format.code} />
+				<IconButton icon="strikethrough" text="Üstü Çizili" type="button" on:click={format.strikethrough} />
+				<IconButton icon="subscript" text="Alt Çizgi" type="button" on:click={format.subscript} />
+				<IconButton icon="superscript" text="Üst Çizgi" type="button" on:click={format.superscript} />
+				<IconButton icon="triangle-exclamation" text="Merakbozan" type="button" on:click={format.spoiler} />
 			</Stack>
 		</Stack>
 

@@ -417,7 +417,7 @@ profile.subscribe((prof) => {
 function makePostTarget(post: Post) {
 	return {
 		icon: 'file',
-		text: 'Post: ' + post.name,
+		text: 'Gönderi: ' + post.name,
 		href: `/${inst}/post/${post.id}`
 	};
 }
@@ -464,7 +464,7 @@ export function modFeaturePostViewToContentView(view: ModFeaturePostView): Conte
 function makeCommentTarget(comment: Comment) {
 	return {
 		icon: 'comments',
-		text: 'Comment: ' + comment.content,
+		text: 'Yorum: ' + comment.content,
 		href: `/${inst}/comment/${comment.id}`
 	};
 }
@@ -580,7 +580,7 @@ export function adminPurgePersonViewToContentView(view: AdminPurgePersonView): C
 		when: view.admin_purge_person.when_,
 		reason: view.admin_purge_person.reason,
 		target: {
-			text: 'Purged a user'
+			text: 'Kullanıcı silindi'
 		}
 	};
 }
@@ -593,7 +593,7 @@ export function adminPurgeCommunityViewToContentView(view: AdminPurgeCommunityVi
 		when: view.admin_purge_community.when_,
 		reason: view.admin_purge_community.reason,
 		target: {
-			text: 'Purged a community'
+			text: 'Topluluk silindi'
 		}
 	};
 }
@@ -606,7 +606,7 @@ export function adminPurgePostViewToContentView(view: AdminPurgePostView): Conte
 		when: view.admin_purge_post.when_,
 		reason: view.admin_purge_post.reason,
 		target: {
-			text: 'Purged a post'
+			text: 'Gönderi silindi'
 		},
 		community: view.community
 	};
@@ -620,7 +620,7 @@ export function adminPurgeCommentViewToContentView(view: AdminPurgeCommentView):
 		when: view.admin_purge_comment.when_,
 		reason: view.admin_purge_comment.reason,
 		target: {
-			text: 'Purged a comment'
+			text: 'Yorum silindi'
 		}
 	};
 }

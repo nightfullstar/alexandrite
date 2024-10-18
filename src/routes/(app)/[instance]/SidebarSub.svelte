@@ -45,7 +45,7 @@
 		</div>
 		<div class="favorite">
 			<IconButton
-				text={favorited ? 'Unfavorite' : 'Favorite'}
+				text={favorited ? 'Favorilerden Çıkar' : 'Favori'}
 				variant={favorited ? 'solid' : 'regular'}
 				pressed={favorited}
 				icon="star"

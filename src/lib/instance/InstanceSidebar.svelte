@@ -2,7 +2,7 @@
 	counts={siteCounts}
 	description={siteView.site.description ?? ''}
 	sidebar={siteView.site.sidebar}
-	context="Your Instance"
+	context="Sizin Sunucunuz"
 >
 	<span slot="name" class="f-row gap-2 align-items-center"
 		><InstanceLogo size="3rem" /><NameAtInstance prefix="" place={{ ...siteView.site, local: true }} />
@@ -37,22 +37,22 @@
 
 	$: siteCounts = [
 		{
-			label: 'Users',
+			label: 'Kullanıcılar',
 			icon: 'users',
 			value: siteView.counts.users
 		},
 		{
-			label: 'Posts',
+			label: 'Gönderiler',
 			icon: 'file-lines',
 			value: siteView.counts.posts
 		},
 		{
-			label: 'Comments',
+			label: 'Yorumlar',
 			icon: 'comments',
 			value: siteView.counts.comments
 		},
 		{
-			label: 'Server Version',
+			label: 'Sunucu Versiyonu',
 			icon: 'code-branch',
 			value: $siteMeta.version
 		}

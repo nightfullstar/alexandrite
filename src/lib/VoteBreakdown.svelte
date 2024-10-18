@@ -24,12 +24,12 @@
 		<span class="sx-badge-gray m-0 votes-up">
 			<Icon icon="arrow-up" />
 			{upvotes}
-			<span class="sr-only">Upvotes</span>
+			<span class="sr-only">Yukarı Oy</span>
 		</span>
 		<span class="sx-badge-gray m-0 votes-down">
 			<Icon icon="arrow-down" />
 			{downvotes}
-			<span class="sr-only">Downvotes</span>
+			<span class="sr-only">Aşağı Oy</span>
 		</span>
 	</Stack>
 

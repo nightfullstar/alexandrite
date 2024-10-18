@@ -17,17 +17,17 @@
 	export let communityView: CommunityView;
 	$: counts = [
 		{
-			label: 'Users',
+			label: 'Kullanıcılar',
 			icon: 'users',
 			value: communityView.counts.subscribers
 		},
 		{
-			label: 'Posts',
+			label: 'Gönderiler',
 			icon: 'file-lines',
 			value: communityView.counts.posts
 		},
 		{
-			label: 'Comments',
+			label: 'Yorumlar',
 			icon: 'comments',
 			value: communityView.counts.comments
 		}

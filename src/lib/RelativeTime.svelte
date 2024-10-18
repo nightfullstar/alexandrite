@@ -38,7 +38,7 @@
 
 	export let variant: 'icon' | 'text' = 'text';
 	export let icon = 'edit';
-	export let verb = 'Posted';
+	export let verb = 'Gönderildi';
 
 	const rtf = new Intl.RelativeTimeFormat(navigator.language, {
 		style: 'narrow'
